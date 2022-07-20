@@ -302,20 +302,17 @@ var Webcam = {
 			var self = this;
 			this.mediaDevices.getUserMedia({
 				"audio": false,
-				//"video": this.params.constraints || {
-				//	mandatory: {
-				//		minWidth: this.params.dest_width,
-				//		minHeight: this.params.dest_height
-				//	},
-				//	facingMode: {
-				//	    exact: this.params.customFacingMode
-				//	}
-				//}
-				"video": {
-				    width: this.params.dest_width,
-				    height: this.params.dest_height,
-				    facingMode: this.params.customFacingMode
-				}//,
+				"video": this.params.constraints || {
+					mandatory: {
+						minWidth: this.params.dest_width,
+						minHeight: this.params.dest_height
+					}
+				}
+				//"video": {
+				   // width: this.params.dest_width,
+				   // height: this.params.dest_height,
+				   // facingMode: this.params.customFacingMode
+				//}//,
 				//"facingMode": {
 				    //exact : this.params.customFacingMode
 				//}
