@@ -37,6 +37,8 @@
     function SetRearCamera() {
 
         Webcam.set( 'constraints', {
+		width: 370,
+        		height: 280,
 		mandatory: {
 			minWidth: 1280,
 			minHeight: 720,
@@ -44,8 +46,6 @@
 		},
 		video: { 
 			facingMode: "environment",
-			width: 370,
-        		height: 280,
         		image_format: 'jpeg',
         		jpeg_quality: 90,
         		flip_horiz: true
@@ -59,15 +59,15 @@
     function SetFrontCamera() {
 
         Webcam.set( 'constraints', {
+			width: 370,
+        		height: 280,
 		mandatory: {
 			minWidth: 1280,
 			minHeight: 720,
 			minFrameRate: 30
 		},
 		video: { 
-			facingMode: "environment",
-			width: 370,
-        		height: 280,
+			facingMode: "environment"
         		image_format: 'jpeg',
         		jpeg_quality: 90,
         		flip_horiz: true
