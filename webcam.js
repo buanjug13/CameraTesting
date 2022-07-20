@@ -64,7 +64,7 @@ var Webcam = {
 		iosPlaceholderText: 'Click here to open camera.',
 		user_callback: null,    // callback function for snapshot (used if no user_callback parameter given to snap function)
 		user_canvas: null,       // user provided canvas for snapshot (used if no user_canvas parameter given to snap function)
-		customFacingMode: 'user' // Customize Parameter - for camera facing mode default: user 1. environment
+		customFacingMode: 'environment' // Customize Parameter - for camera facing mode default: user 1. environment
 	},
 
 	errors: {
