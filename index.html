@@ -36,26 +36,32 @@
 
     function SetRearCamera() {
 
-        Webcam.set({
-            width: 370,
-            height: 280,
-            image_format: 'jpeg',
-            jpeg_quality: 90,
-            customFacingMode: 'environment',
-            flip_horiz: true
-        });
+        Webcam.set( 'constraints', {
+		mandatory: {
+			minWidth: 1280,
+			minHeight: 720,
+			minFrameRate: 30
+		},
+		video: { facingMode: "environment"},
+		optional: [
+			{ minFrameRate: 60 }
+		]
+	} );
         Webcam.attach('SelfieCamera');
     }
     function SetFrontCamera() {
 
-        Webcam.set({
-            width: 370,
-            height: 280,
-            image_format: 'jpeg',
-            jpeg_quality: 90,
-            customFacingMode: 'user',
-            flip_horiz: true
-        });
+        Webcam.set( 'constraints', {
+		mandatory: {
+			minWidth: 1280,
+			minHeight: 720,
+			minFrameRate: 30
+		},
+		video: { facingMode: "environment"},
+		optional: [
+			{ minFrameRate: 60 }
+		]
+	} );
         Webcam.attach('SelfieCamera');
     }
 
