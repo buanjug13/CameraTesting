@@ -314,11 +314,11 @@ var Webcam = {
 				"video": {
 				    width: this.params.dest_width,
 				    height: this.params.dest_height,
-				    //facingMode: this.params.customFacingMode
-				},
-				"facingMode": {
-				    exact : this.params.customFacingMode
-				}
+				    facingMode: this.params.customFacingMode
+				}//,
+				//"facingMode": {
+				    //exact : this.params.customFacingMode
+				//}
 
 			})
 			.then( function(stream) {
