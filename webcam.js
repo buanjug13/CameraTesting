@@ -441,7 +441,7 @@ var Webcam = {
 					// global user_callback defined - create the snapshot
 					//self.snap(params.user_callback, params.user_canvas);
 					
-					window.alert('statement 2')
+					window.alert('statement 1')
 				} else {
 					// no global callback definied for snapshot, load image and wait for external snap method call
 					//input.style.display = 'block';
