@@ -272,7 +272,7 @@ var Webcam = {
 		var scaleX = this.params.width / this.params.dest_width;
 		var scaleY = this.params.height / this.params.dest_height;
 		
-		if (this.userMedia) {
+		if (this.userMedia || this.iOS) {
 			// setup webcam video container
 			var video = document.createElement('video');
 			video.setAttribute('autoplay', 'autoplay');
