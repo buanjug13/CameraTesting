@@ -26,6 +26,7 @@
 
         <button type="button" class="btn btn-success" onclick="SetRearCamera()">Open Rear Camera</button>
         <button type="button" class="btn btn-primary" onclick="SetFrontCamera()">Open Front Camera</button>
+        <button type="button" class="btn btn-info" onclick="Capture()">Capture</button>
     	</div>
 	
 	
@@ -66,6 +67,11 @@
 			}
 		});
         Webcam.attach('SelfieCamera');
+    }
+	function Capture() {
+		Webcam.snap( function(data_uri) {
+				document.getElementById('SelfieCamera').innerHTML = '<img src="'+data_uri+'"/>';
+			} );
     }
 
 </script>
